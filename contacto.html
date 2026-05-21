@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - CyberShield Consulting</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <img src="img/logo.png.jpg" alt="Logo CyberShield Consulting" width="120">
+        <h1>CyberShield Consulting</h1>
+        <p>Protegemos tu información, fortalecemos tu negocio</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="soluciones.html">Soluciones</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <section class="seccion">
+            <h2>Contáctanos</h2>
+            <p>
+                Estamos listos para ayudarte a proteger la información de tu organización.
+            </p>
+
+            <h3>Datos de Contacto</h3>
+            <p><strong>Dirección:</strong> Av. Tecnología 100, Monterrey, Nuevo León, México</p>
+            <p><strong>Teléfono:</strong> +52 (81) 1234 5678</p>
+            <p><strong>Correo:</strong> contacto@cybershieldconsulting.com</p>
+            <p><strong>Horario:</strong> Lunes a Viernes de 9:00 a 18:00 horas</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Formulario de Contacto</h2>
+
+            <form onsubmit="mostrarMensaje(event)">
+                <p>
+                    <label for="nombre">Nombre completo:</label><br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </p>
+
+                <p>
+                    <label for="correo">Correo electrónico:</label><br>
+                    <input type="email" id="correo" name="correo" required>
+                </p>
+
+                <p>
+                    <label for="empresa">Empresa:</label><br>
+                    <input type="text" id="empresa" name="empresa">
+                </p>
+
+                <p>
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="6" cols="50" required></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Enviar Mensaje</button>
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 CyberShield Consulting. Todos los derechos reservados.</p>
+    </footer>
+<script>
+function mostrarMensaje(event) {
+    event.preventDefault();
+
+    alert("Mensaje enviado correctamente. Nos pondremos en contacto contigo.");
+
+    document.querySelector("form").reset();
+}
+</script>
+</body>
+</html>
